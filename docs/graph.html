@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>APE Viewer</title>
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      /* Removed full-page background image to avoid duplication */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #102436;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    #main {
+      position: relative;
+    }
+    #main::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75vw;
+      height: 75vh;
+      background-image: url('img/New_Ape.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.15;
+      z-index: -1;
+      mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+    }
+    #sidebar, #network, #preview {
+      background-color: transparent !important;
+      backdrop-filter: none;
+      border: none;
+      box-shadow: none;
+      z-index: 1;
+      position: relative;
+      color: white;
+      padding: 10px;
+      flex: 1;
+      overflow-y: auto;
+    }
+    #main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    #sidebar {
+      margin-top: 60px;
+      width: 125px;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 10px;
+      transition: width 0.3s ease;
+      background-color: transparent;
+    }
+    #sidebar.hidden {
+      display: none;
+    }
+    #toggle-sidebar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #2e415c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    #network {
+      flex: 2;
+      position: relative;
+      background-color: transparent;
+    }
+    #network::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('ape_no_background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    #network canvas {
+      position: relative;
+      z-index: 1;
+    }
+    #network::before {
+      content: "";
+      display: none;
+    }
+    #network canvas {
+      position: relative;
+      z-index: 1;
+    }
+     #sidebar{
+      flex: 0.5;
+      background-color: #102436;
+      position: relative;
+    }
+    #network{
+      flex: 2;
+      background-color: #102436;
+      position: relative;
+    }
+    #preview {
+      background-color: transparent;
+      flex: 1;
+      padding: 10px;
+      background-color: #1b2d47;
+      overflow-y: auto;
+      border-left: 1px solid #2e415c;
+      color: white;
+    }
+    .slider-group {
+      margin-top: 8px;
+    }
+    .slider-group label {
+      display: block;
+      margin-bottom: 4px;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    #preview h1 {
+      color: #37C980;
+    }
+    #preview h2 {
+      color: #FFCE02;
+    }
+    #preview h3 {
+      color: #2D84C1;
+    }
+    #preview p, #preview li, #preview code {
+      color: white;
+    }
+    #preview pre code {
+      display: block;
+      background: #333;
+      padding: 10px;
+      border-radius: 4px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-x: hidden;
+    }
+    a.wikilink {
+      color: #37C980;
+      cursor: pointer;
+    }
+    #preview a {
+      color: #FA681B;
+    }
+    #sidebar label,
+  .slider-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+  }
+  #sidebar input[type="range"] {
+    appearance: none;
+    height: 4px;
+    border-radius: 2px;
+    background: #444;
+    outline: none;
+    margin-top: 4px;
+  }
+  #sidebar input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #FA681B;
+    cursor: pointer;
+  }
+  #sidebar button#reset-view {
+    margin-top: 10px;
+    background-color: #FA681B;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #sidebar button#reset-view:hover {
+    background-color: #cc5600;
+  }
+</style>
+</head>
+<body>
+  <button id="toggle-sidebar">Toggle Controls</button>
+  <div id="main">
+    <div id="sidebar">
+      <label><input type="checkbox" id="toggle-physics" checked> Enable Physics</label>
+      <label><input type="checkbox" id="toggle-smooth"> Wiggly</label>
+      <div class="slider-group">
+        <label for="repulsion">Node Repulsion: <span id="repulsion-val">350</span></label>
+        <input type="range" id="repulsion" min="0" max="500" value="350">
+      </div>
+      <div class="slider-group">
+        <label for="central-gravity">Central Gravity: <span id="gravity-val">0.3</span></label>
+        <input type="range" id="central-gravity" min="0" max="1" step="0.01" value="0.3">
+      </div>
+      <div class="slider-group">
+        <label for="spring-length">Spring Length: <span id="spring-length-val">75</span></label>
+        <input type="range" id="spring-length" min="10" max="400" value="75">
+      </div>
+      <div class="slider-group">
+        <label for="damping">Damping: <span id="damping-val">0.9</span></label>
+        <input type="range" id="damping" min="0.01" max="0.5" step="0.01" value="0.9">
+      </div>
+      <button id="reset-view">Reset View</button>
+    </div>
+    <div id="network"></div>
+    <div id="preview">Click on a node to preview its markdown content.</div></div>
+<div style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; font-size: 0.75rem; font-family: sans-serif; color: #ccc; border-top: 1px solid #2e415c; background-color: #102436; box-sizing: border-box;">
+  <div style="flex: 1; text-align: center;">
+    <a href="https://github.com/hiddenlayerai/ape-taxonomy" style="color: #37C980; text-decoration: none;">APE Taxonomy</a> © 2025 by
+    <a href="https://hiddenlayer.com" style="color: #37C980; text-decoration: none;">HiddenLayer</a> is licensed under
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/" style="color: #ccc; text-decoration: none;">CC BY-ND 4.0</a>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em; max-height:1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em; max-height:1em; margin-left: .2em;">
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="max-width: 1em; max-height:1em; margin-left: .2em;">
+  </div>
+  <div style="flex-shrink: 0;">
+    <img src="img/HL_Logo_Line.png" alt="HL Logo" style="height: 28px; margin-left: 20px;">
+  </div>
+</div>
+<script>
+    let network;
+    let options;
+    let nodes;
+
+    document.getElementById('toggle-sidebar').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('hidden');
+    });
+
+    function renderMarkdownFromFile(filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(text => {
+          const wikilinked = text.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (match, target, alias) => {
+            const file = target.trim().endsWith(".md") ? target.trim() : `${target.trim()}.md`;
+            const label = alias || file;
+            return `<a href="#" data-node="${file}" class="wikilink">${label}</a>`;
+          });
+          document.getElementById('preview').innerHTML = marked.parse(wikilinked, { breaks: true });
+
+          Array.from(document.querySelectorAll('.wikilink')).forEach(link => {
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              const node = e.target.getAttribute('data-node');
+              if (node && nodes.get(node)) {
+                network.selectNodes([node]);
+                network.focus(node, { animation: true });
+                renderMarkdownFromFile(node);
+              }
+            });
+          });
+        })
+        .catch(() => {
+          document.getElementById('preview').textContent = "Unable to load markdown file.";
+        });
+    }
+
+    fetch('md_graph.json')
+      .then(response => response.json())
+      .then(data => {
+        nodes = new vis.DataSet(
+          data.nodes.map(n => ({
+            id: n.id,
+            label: n.label,
+            title: undefined,
+            shape: 'dot',
+            size: 20,
+            font: { size: 14, color: 'white' },
+            color: n.color || '#37C980'
+          }))
+        );
+
+        const edges = new vis.DataSet(
+          data.edges.map(e => ({
+            from: e.source,
+            to: e.target,
+            arrows: 'to',
+            color: { color: 'white' }
+          }))
+        );
+
+        const container = document.getElementById('network');
+        options = {
+          physics: {
+            enabled: true,
+            stabilization: true,
+            solver: 'repulsion',
+            repulsion: {
+              nodeDistance: 350,
+              centralGravity: 0.08,
+              springLength: 75,
+              springConstant: 0.05,
+              damping: 0.4
+            }
+          },
+          edges: {
+            smooth: false
+          },
+          layout: {
+            improvedLayout: true
+          }
+        };
+
+        network = new vis.Network(container, { nodes, edges }, options);
+        network.moveTo({ scale: 0.1 }); // Adjust between 0.1 (zoomed out) to 1+ (zoomed in)
+        network.fit({ animation: false, scale: 0.1 });
+
+        document.getElementById('toggle-smooth').addEventListener('change', (e) => {
+          options.edges.smooth = e.target.checked;
+          network.setOptions({ edges: { smooth: options.edges.smooth } });
+        });
+
+        document.getElementById('toggle-physics').addEventListener('change', (e) => {
+          network.setOptions({ physics: { enabled: e.target.checked } });
+        });
+
+        document.getElementById('repulsion').addEventListener('input', (e) => {
+          const val = parseInt(e.target.value);
+          document.getElementById('repulsion-val').textContent = val;
+          options.physics.repulsion.nodeDistance = val;
+          network.setOptions({ physics: options.physics });
+        });
+
+        document.getElementById('central-gravity').addEventListener('input', (e) => {
+          const val = parseFloat(e.target.value);
+          document.getElementById('gravity-val').textContent = val;
+          options.physics.repulsion.centralGravity = val;
+          network.setOptions({ physics: options.physics });
+        });
+
+        document.getElementById('spring-length').addEventListener('input', (e) => {
+          const val = parseInt(e.target.value);
+          document.getElementById('spring-length-val').textContent = val;
+          options.physics.repulsion.springLength = val;
+          network.setOptions({ physics: options.physics });
+        });
+
+        document.getElementById('damping').addEventListener('input', (e) => {
+          const val = parseFloat(e.target.value);
+          document.getElementById('damping-val').textContent = val;
+          options.physics.repulsion.damping = val;
+          network.setOptions({ physics: options.physics });
+        });
+
+        document.getElementById('reset-view').addEventListener('click', () => {
+          network.fit({ animation: true });
+        });
+
+        network.on("click", function (params) {
+          if (params.nodes.length > 0) {
+            const nodeId = params.nodes[0];
+            renderMarkdownFromFile(nodeId);
+          }
+        });
+      });
+  </script>
+ 
+</body>
+</html>
