@@ -1,0 +1,3 @@
+# ape-taxonomy
+
+<a href="https://github.com/hiddenlayerai/ape-taxonomy">APE Taxonomy</a> © 2025 by <a href="https://hiddenlayer.com">HiddenLayer</a> is licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
