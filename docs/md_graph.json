@@ -1,0 +1,659 @@
+{
+  "nodes": [
+    {
+      "id": "APE/Tactics/HL01/HL01.md",
+      "label": "HL01-Obfuscation",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/Tactics.md",
+      "label": "Tactics",
+      "color": "#1ABC9C"
+    },
+    {
+      "id": "APE/Tactics/HL02/HL02.md",
+      "label": "HL02-Lore Abuse",
+      "color": "#37C980"
+    },
+    {
+      "id": "APE/Tactics/HL03/HL03.md",
+      "label": "HL03-Cognitive Manipulation",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL04/HL04.md",
+      "label": "HL04-Embedding/Token Manipulation",
+      "color": "#FA681B"
+    },
+    {
+      "id": "APE/Tactics/HL05/HL05.md",
+      "label": "HL05-Context Manipulation",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL06/HL06.md",
+      "label": "HL06-Output Structuring",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL07/HL07.md",
+      "label": "HL07-Attack Augmentation",
+      "color": "#E74C3C"
+    },
+    {
+      "id": "APE/Tactics/HL08/HL08.md",
+      "label": "HL08-Multi-LLM Attacks ",
+      "color": "#3498DB"
+    },
+    {
+      "id": "APE/APE.md",
+      "label": "APE",
+      "color": "#DF0DD4"
+    },
+    {
+      "id": "APE/Tactics/HL01/Techniques/HL01.01.md",
+      "label": "HL01.01-ASCII-Art",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/HL01/Techniques/HL01.02.md",
+      "label": "HL01.02-Encrypted/Encoded Input",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/HL01/Techniques/HL01.03.md",
+      "label": "HL01.03-Encrypted/Encoded Output",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/HL01/Techniques/HL01.04.md",
+      "label": "HL01.04-Random Character Insertion/Replacement",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/HL01/Techniques/HL01.05.md",
+      "label": "HL01.05-Payload Splitting",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/HL01/Techniques/HL01.06.md",
+      "label": "HL01.06-Translated Language",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/HL01/Techniques/HL01.07.md",
+      "label": "HL01.07-Language Blindspotting",
+      "color": "#FFFFFF"
+    },
+    {
+      "id": "APE/Tactics/HL02/Techniques/HL02.01.md",
+      "label": "HL02.01-KROP",
+      "color": "#37C980"
+    },
+    {
+      "id": "APE/Tactics/HL02/Techniques/HL02.02.md",
+      "label": "HL02.02-Language Completion Games",
+      "color": "#37C980"
+    },
+    {
+      "id": "APE/Tactics/HL02/Techniques/HL02.03.md",
+      "label": "HL02.03-Synonym Attack",
+      "color": "#37C980"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.01.md",
+      "label": "HL03.01-Templating",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.02.md",
+      "label": "HL03.02-Narrative Smuggling",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.03.md",
+      "label": "HL03.03-Emotional Appeal",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.04.md",
+      "label": "HL03.04-Imperative Emphasis",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.05.md",
+      "label": "HL03.05-Role Playing",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.06.md",
+      "label": "HL03.06-Cognitive Overload",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.07.md",
+      "label": "HL03.07-Crescendo Attacks",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.08.md",
+      "label": "HL03.08-Semantic Confusion",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.09.md",
+      "label": "HL03.09-Syntax-Based Input",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.10.md",
+      "label": "HL03.10-Meta Prompting",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.11.md",
+      "label": "HL03.11-Instruction Override",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL03/Techniques/HL03.12.md",
+      "label": "HL03.12-Refusal Suppression",
+      "color": "#FFCE02"
+    },
+    {
+      "id": "APE/Tactics/HL04/Techniques/HL04.01.md",
+      "label": "HL04.01-Token-Aware Prompting",
+      "color": "#FA681B"
+    },
+    {
+      "id": "APE/Tactics/HL04/Techniques/HL04.02.md",
+      "label": "HL04.02-Unspeakable Tokens",
+      "color": "#FA681B"
+    },
+    {
+      "id": "APE/Tactics/HL04/Techniques/HL04.03.md",
+      "label": "HL04.03-Glitch Tokens",
+      "color": "#FA681B"
+    },
+    {
+      "id": "APE/Tactics/HL04/Techniques/HL04.04.md",
+      "label": "HL04.04-High-Perplexity Padding",
+      "color": "#FA681B"
+    },
+    {
+      "id": "APE/Tactics/HL04/Techniques/HL04.05.md",
+      "label": "HL04.05-Algorithmic Attacks",
+      "color": "#FA681B"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.01.md",
+      "label": "HL05.01-Few-Shot Prompting",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.02.md",
+      "label": "HL05.02-Zero-Shot Prompting",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.03.md",
+      "label": "HL05.03-Control Token Injection/Spoofing",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.04.md",
+      "label": "HL05.04-Chain-of-Thought Spoofing",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.05.md",
+      "label": "HL05.05-Tool Spoofing",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.06.md",
+      "label": "HL05.06-Conversation Spoofing",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.07.md",
+      "label": "HL05.07-System Prompt Spoofing",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.08.md",
+      "label": "HL05.08-Context Window Separation",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.09.md",
+      "label": "HL05.09-Overflow-Induced Amnesia",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.10.md",
+      "label": "HL05.10-Policy Puppetry",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL05/Techniques/HL05.11.md",
+      "label": "HL05.11-Defined Dictionary",
+      "color": "#00B8D9"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.01.md",
+      "label": "HL06.01-Summarization",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.02.md",
+      "label": "HL06.02-Output Natural Language",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.03.md",
+      "label": "HL06.03-Output Creative ",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.04.md",
+      "label": "HL06.04-Syntax-Based Output",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.05.md",
+      "label": "HL06.05-Output Termination",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.06.md",
+      "label": "HL06.06-Repeating Output",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.07.md",
+      "label": "HL06.07-Output Pruning",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL06/Techniques/HL06.08.md",
+      "label": "HL06.08-Stop-Token Prevention",
+      "color": "#8E44AD"
+    },
+    {
+      "id": "APE/Tactics/HL07/Techniques/HL07.01.md",
+      "label": "HL07.01-Attack Stacking",
+      "color": "#E74C3C"
+    },
+    {
+      "id": "APE/Tactics/HL07/Techniques/HL07.02.md",
+      "label": "HL07.02-Attack Concatenation",
+      "color": "#E74C3C"
+    },
+    {
+      "id": "APE/Tactics/HL07/Techniques/HL07.03.md",
+      "label": "HL07.03-Multi-Turn",
+      "color": "#E74C3C"
+    },
+    {
+      "id": "APE/Tactics/HL07/Techniques/HL07.04.md",
+      "label": "HL07.04-Indirect Visibility",
+      "color": "#E74C3C"
+    },
+    {
+      "id": "APE/Tactics/HL08/Techniques/HL08.01.md",
+      "label": "HL08.01-Recursive Injection",
+      "color": "#3498DB"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.01.md",
+      "label": "HLO.01-Alignment Bypass/Jailbreak",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives.md",
+      "label": "Objectives",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.02.md",
+      "label": "HLO.02-Task Redirection/Hijacking",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.03.md",
+      "label": "HLO.03-Context Leakage",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.04.md",
+      "label": "HLO.04-Agent/Application/Plugin/Tool Exploitation",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.05.md",
+      "label": "HLO.05-Data Leakage",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.06.md",
+      "label": "HLO.06-Toxic Output",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.07.md",
+      "label": "HLO.07-Reputation Damage",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.08.md",
+      "label": "HLO.08-Hallucination/Confabulation",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.09.md",
+      "label": "HLO.09-Denial of Service/Resource Exhaustion",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Objectives/Objectives/HLO.10.md",
+      "label": "HLO.10-Input/Output Filter Evasion",
+      "color": "#F39C12"
+    },
+    {
+      "id": "APE/Axioms/Axioms.md",
+      "label": "Axioms",
+      "color": "#FFC0CB"
+    }
+  ],
+  "edges": [
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/HL01/Techniques/HL01.01.md"
+    },
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/HL01/Techniques/HL01.02.md"
+    },
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/HL01/Techniques/HL01.03.md"
+    },
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/HL01/Techniques/HL01.04.md"
+    },
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/HL01/Techniques/HL01.05.md"
+    },
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/HL01/Techniques/HL01.06.md"
+    },
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/HL01/Techniques/HL01.07.md"
+    },
+    {
+      "source": "APE/Tactics/HL01/HL01.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL02/HL02.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL04/HL04.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL07/HL07.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL08/HL08.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/Tactics/HL02/HL02.md",
+      "target": "APE/Tactics/HL02/Techniques/HL02.01.md"
+    },
+    {
+      "source": "APE/Tactics/HL02/HL02.md",
+      "target": "APE/Tactics/HL02/Techniques/HL02.02.md"
+    },
+    {
+      "source": "APE/Tactics/HL02/HL02.md",
+      "target": "APE/Tactics/HL02/Techniques/HL02.03.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.01.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.02.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.03.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.04.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.05.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.06.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.07.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.08.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.09.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.10.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.11.md"
+    },
+    {
+      "source": "APE/Tactics/HL03/HL03.md",
+      "target": "APE/Tactics/HL03/Techniques/HL03.12.md"
+    },
+    {
+      "source": "APE/Tactics/HL04/HL04.md",
+      "target": "APE/Tactics/HL04/Techniques/HL04.01.md"
+    },
+    {
+      "source": "APE/Tactics/HL04/HL04.md",
+      "target": "APE/Tactics/HL04/Techniques/HL04.02.md"
+    },
+    {
+      "source": "APE/Tactics/HL04/HL04.md",
+      "target": "APE/Tactics/HL04/Techniques/HL04.03.md"
+    },
+    {
+      "source": "APE/Tactics/HL04/HL04.md",
+      "target": "APE/Tactics/HL04/Techniques/HL04.04.md"
+    },
+    {
+      "source": "APE/Tactics/HL04/HL04.md",
+      "target": "APE/Tactics/HL04/Techniques/HL04.05.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.01.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.02.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.03.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.04.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.05.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.06.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.07.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.08.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.09.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.10.md"
+    },
+    {
+      "source": "APE/Tactics/HL05/HL05.md",
+      "target": "APE/Tactics/HL05/Techniques/HL05.11.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.01.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.02.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.03.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.04.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.05.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.06.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.07.md"
+    },
+    {
+      "source": "APE/Tactics/HL06/HL06.md",
+      "target": "APE/Tactics/HL06/Techniques/HL06.08.md"
+    },
+    {
+      "source": "APE/Tactics/HL07/HL07.md",
+      "target": "APE/Tactics/HL07/Techniques/HL07.01.md"
+    },
+    {
+      "source": "APE/Tactics/HL07/HL07.md",
+      "target": "APE/Tactics/HL07/Techniques/HL07.02.md"
+    },
+    {
+      "source": "APE/Tactics/HL07/HL07.md",
+      "target": "APE/Tactics/HL07/Techniques/HL07.03.md"
+    },
+    {
+      "source": "APE/Tactics/HL07/HL07.md",
+      "target": "APE/Tactics/HL07/Techniques/HL07.04.md"
+    },
+    {
+      "source": "APE/Tactics/HL08/HL08.md",
+      "target": "APE/Tactics/HL08/Techniques/HL08.01.md"
+    },
+    {
+      "source": "APE/APE.md",
+      "target": "APE/Tactics/Tactics.md"
+    },
+    {
+      "source": "APE/APE.md",
+      "target": "APE/Objectives/Objectives.md"
+    },
+    {
+      "source": "APE/APE.md",
+      "target": "APE/Axioms/Axioms.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.01.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.02.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.03.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.04.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.05.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.06.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.07.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.08.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.09.md"
+    },
+    {
+      "source": "APE/Objectives/Objectives.md",
+      "target": "APE/Objectives/Objectives/HLO.10.md"
+    }
+  ]
+}
