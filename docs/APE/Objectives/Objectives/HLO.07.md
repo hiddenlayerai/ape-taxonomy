@@ -1,6 +1,6 @@
 # HLO.07 - Reputation Damage
 ## Description
-Generate false or derogatory content that could potentially harm brand reputation if exposed.
+Prompt the model into generating harmful, misleading, or defamatory statements or content that could damage the reputation of individuals, organizations, or products
 ### Back to Objectives
 [[APE/Objectives/Objectives.md|Objectives]]
 
