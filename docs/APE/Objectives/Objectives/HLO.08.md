@@ -1,6 +1,6 @@
 # HLO.08 - Hallucination/Confabulation
 ## Description
-Trigger the generation of fabricated information presented with high confidence that could mislead users or create business risk.
+Trigger the model to confidently present false or fabricated information to mislead users, erode trust, or produce outputs that pose compliance, operational, or legal risks
 ### Back to Objectives
 [[APE/Objectives/Objectives.md|Objectives]]
 
