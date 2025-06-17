@@ -12,7 +12,7 @@ Our taxonomy is built on four layers, the latter three of which are hierarchical
 ## Interactive Navigation
 Here's a link [Taxonomy of Adversarial Prompt Engineering](https://hiddenlayerai.github.io/ape-taxonomy/graph.html).
 
-![Screenshot1](https://github.com/hiddenlayerai/ape-taxonomy/blob/main/screenshots/Screenshot_1.png))
+![Screenshot1](https://github.com/hiddenlayerai/ape-taxonomy/blob/main/screenshots/Screenshot_2.png)
 
 
 ## Contributions
