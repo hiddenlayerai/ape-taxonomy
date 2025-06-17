@@ -1,6 +1,6 @@
 # HLO.04 - Agent/Application/Plugin/Tool Exploitation
 ## Description
-Validate functionality of an agentic LLM, tool, or plugin to escape the boundaries of the intended purpose
+Interact with models equipped with external tools, plugins, or agentic capabilities in a way that pushes them beyond their intended usage boundaries.
 ### Back to Objectives
 [[APE/Objectives/Objectives.md|Objectives]]
 
