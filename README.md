@@ -10,7 +10,7 @@ Our taxonomy is built on four layers, the latter three of which are hierarchical
 - Procedures/Prompts - The adversarial prompts
 
 ## Interactive Navigation
-Here's a link [Taxonomy of Adversarial Prompt Engineering](https://github.com/hiddenlayerai/ape-taxonomy).
+Here's a link [Taxonomy of Adversarial Prompt Engineering](https://hiddenlayerai.github.io/ape-taxonomy/graph.html).
 
 ## Contributions
 Ultimately, the effectiveness of any taxonomy, like natural languages and conventions such as traffic rules, depends on its widespread adoption and usage. To succeed, it must be a community-driven effort. Your contributions and active engagement are essential to ensure that this taxonomy serves as a valuable, up-to-date resource for the entire AI security community. 
