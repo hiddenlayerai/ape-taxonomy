@@ -1,6 +1,6 @@
 # HLO.10 - Input/Output Filter Evasion
 ## Description
-Explicitly creating prompts to bypass security solutions monitoring the input and/or output of a LLM application
+Constructing inputs that intentionally circumvent security tools or moderation systems monitoring the model's inputs and outputs.
 ### Back to Objectives
 [[APE/Objectives/Objectives.md|Objectives]]
 
