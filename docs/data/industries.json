@@ -1,0 +1,157 @@
+{
+  "industries": [
+    {
+      "name": "Healthcare",
+      "impact": [
+        {
+          "name": "Confidentiality",
+          "description": "Healthcare AI systems frequently have access to some of the most sensitive information handled by any industry. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, healthcare systems introduce additional high-value targets including protected health information (PHI), patient records, clinical notes, diagnostic histories, care plans, insurance information, and internal clinical decision-support guidance. \n\nAttackers may also seek to uncover triage criteria, treatment protocols, referral logic, or other operational knowledge that reveals how healthcare decisions are made. Because healthcare AI systems often have access to highly regulated and deeply personal information, confidentiality failures can impact patient privacy, regulatory compliance, organizational trust, and the security of broader healthcare operations."
+        },
+        {
+          "name": "Integrity",
+          "description": "Patient care is supported by a complex network of clinical information, operational workflows, and healthcare decisions that increasingly involve AI systems. Rather than simply changing model behavior, attackers may attempt to affect triage assessments, diagnostic recommendations, treatment guidance, referral decisions, patient prioritization, clinical documentation, scheduling workflows, or administrative processes that support care delivery.\n\nHealthcare AI systems are often trusted to assist providers, patients, and operational staff, making them attractive targets for prompt injections that redirect tasks, introduce misinformation, manipulate recommendations, invoke unauthorized actions, or otherwise distort clinical and business processes. Even seemingly minor changes to outputs can have downstream consequences when they influence patient care, resource allocation, or medical decision-making."
+        },
+        {
+          "name": "Availability",
+          "description": "Many healthcare services depend on rapid access to information, support systems, and operational resources. Attackers may attempt to overwhelm AI-powered triage systems, consume computational resources, trigger excessive escalations, exhaust human review processes, generate unnecessary clinical workloads, or create operational bottlenecks that slow care delivery. Because many healthcare workflows are time-sensitive and designed to prioritize patient safety, attacks that increase latency, create review burdens, or disrupt access to critical support systems can have disproportionate operational impact. The ultimate consequence is often not simply degraded system performance, but delayed care, reduced clinical efficiency, and increased strain on healthcare personnel and resources."
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "impact": [
+        {
+          "name": "Confidentiality",
+          "description": "Financial AI systems often have access to sensitive customer, transactional, and institutional information that is closely tied to both regulatory obligations and business operations. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, financial systems introduce additional high-value targets including account information, transaction histories, investment portfolios, credit data, fraud investigations, compliance records, risk models, and proprietary market intelligence. \n\nAttackers may also seek to uncover internal risk-scoring methodologies, fraud detection logic, surveillance heuristics, escalation criteria, or other operational knowledge that reveals how financial institutions evaluate customers, transactions, and risk. Because financial organizations rely heavily on both customer trust and regulatory compliance, confidentiality failures can expose sensitive financial information, reveal proprietary business processes, and create legal, financial, and reputational consequences."
+        },
+        {
+          "name": "Integrity",
+          "description": "Financial institutions rely on accurate information, consistent controls, and trustworthy decision-making to support everything from customer servicing and fraud detection to lending, investing, and regulatory compliance. Attackers may attempt to influence risk assessments, credit decisions, fraud investigations, dispute resolutions, transaction reviews, compliance workflows, portfolio recommendations, or other processes that affect financial outcomes. \n\nFinancial AI systems are often trusted to assist customers, analysts, advisors, and operational teams, making them attractive targets for prompt injections that manipulate recommendations, redirect workflows, alter risk classifications, invoke unauthorized actions, or introduce misinformation into regulated decision-making processes. Even subtle changes to outputs or workflow outcomes can affect customer treatment, financial exposure, regulatory obligations, and institutional risk."
+        },
+        {
+          "name": "Availability",
+          "description": "Financial institutions operate in environments where transactions, investigations, and customer services are often expected to occur in near real time.Attackers may attempt to overwhelm fraud monitoring systems, generate excessive compliance reviews, trigger repeated investigations, exhaust analyst resources, create unnecessary escalation workflows, or otherwise consume operational capacity. \n\nBecause financial institutions often operate under strict service expectations, regulatory deadlines, and real-time transaction requirements, attacks that increase latency, create review backlogs, or disrupt access to critical systems can have consequences that extend beyond technical performance. The result may include delayed customer service, slower fraud response, disrupted financial operations, increased operational costs, and reduced confidence in the institution's ability to manage risk effectively."
+        }
+      ]
+    },
+    {
+      "name": "Insurance",
+      "objectives": [
+        {
+          "name": "Confidentiality",
+          "description": "Insurance AI systems often have access to large volumes of sensitive policyholder, claims, and operational information that support underwriting, claims handling, fraud detection, and customer servicing activities. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, insurance environments introduce additional high-value targets including claims files, underwriting records, medical documentation, accident reports, property inventories, financial disclosures, investigative notes, and policyholder information. \n\nAttackers may also seek to uncover underwriting criteria, pricing methodologies, fraud-scoring logic, catastrophe modeling assumptions, escalation thresholds, or internal interpretations of policy language that reveal how insurers assess risk and make coverage decisions. Because insurers rely on both sensitive customer information and proprietary risk models, confidentiality failures can expose regulated data, reveal competitive business intelligence, and undermine trust in insurance operations."
+        },
+        {
+          "name": "Integrity",
+          "description": "Insurance organizations depend on consistent risk assessment, accurate policy interpretation, and reliable claims handling processes to support underwriting and coverage decisions. Attackers may attempt to influence claim evaluations, underwriting assessments, fraud investigations, policy interpretations, appeals reviews, premium calculations, or other workflows that affect how risk is evaluated and coverage is administered. \n\nInsurance AI systems are often trusted to assist adjusters, underwriters, agents, and policyholders, making them attractive targets for prompt injections that manipulate recommendations, alter risk classifications, redirect workflows, invoke unauthorized actions, or distort information presented to human decision-makers. Even subtle changes to outputs can influence claim outcomes, coverage determinations, fraud investigations, and financial decisions that carry regulatory, legal, and operational consequences."
+        },
+        {
+          "name": "Availability",
+          "description": "Many insurance operations rely on timely processing of claims, underwriting reviews, fraud investigations, customer service requests, and regulatory workflows. Attackers may attempt to overwhelm claims processing systems, trigger excessive fraud reviews, generate repeated appeals, exhaust adjuster resources, create unnecessary escalations, or otherwise consume operational capacity. \n\nBecause insurance organizations often manage large review queues and depend on layered human oversight, attacks that increase workload, create processing delays, or disrupt access to critical systems can have significant downstream effects. The result may include slower claim resolution, delayed policy servicing, reduced operational efficiency, increased costs, and diminished ability to respond effectively during high-volume events such as natural disasters or major loss incidents."
+        }
+      ]
+    },
+    {
+      "name": "Automotive",
+      "objectives": [
+        {
+          "name": "Confidentiality",
+          "description": "Automotive AI systems often operate across dealership, vehicle, and enterprise environments that contain a wide range of sensitive customer, operational, and proprietary information. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, automotive systems introduce additional high-value targets including customer records, financing applications, service histories, telematics data, vehicle location information, warranty records, engineering documentation, and manufacturing intelligence. \n\nAttackers may also seek to uncover pricing strategies, incentive eligibility criteria, financing approval thresholds, recall prioritization models, diagnostic logic, or other operational knowledge that reveals how automotive organizations make decisions. Because automotive AI systems frequently support both customer-facing and operational functions, confidentiality failures can expose personal information, reveal proprietary business processes, and create privacy, regulatory, and competitive risks."
+        },
+        {
+          "name": "Integrity",
+          "description": "Automotive organizations rely on accurate information and consistent decision-making across vehicle sales, service operations, financing workflows, warranty administration, diagnostics, and safety-related processes. Attackers may attempt to influence vehicle recommendations, financing determinations, warranty evaluations, service assessments, recall prioritization, diagnostic findings, or other workflows that affect customer outcomes and operational decisions. \n\nAutomotive AI systems are often trusted to assist customers, dealership personnel, technicians, fleet operators, and enterprise teams, making them attractive targets for prompt injections that manipulate recommendations, alter classifications, redirect workflows, invoke unauthorized actions, or distort information presented to human decision-makers. Even small changes to outputs can influence purchasing decisions, service outcomes, financial commitments, safety assessments, and regulatory obligations."
+        },
+        {
+          "name": "Availability",
+          "description": "Many automotive operations depend on timely access to customer service platforms, dealership systems, diagnostic tools, connected vehicle services, and operational workflows. Attackers may attempt to overwhelm scheduling systems, generate excessive service requests, trigger repeated diagnostic reviews, exhaust support resources, create unnecessary escalations, or otherwise consume operational capacity. \n\nBecause automotive organizations often balance customer responsiveness, safety considerations, and high-volume operational demands, attacks that create delays or increase workload can have consequences beyond technical performance. The result may include slower customer service, delayed maintenance and repair activities, reduced dealership efficiency, increased operational costs, disruptions to connected vehicle services, and diminished ability to respond to safety-related events."
+        }
+      ]
+    },
+    {
+      "name": "Retail",
+      "objectives": [
+        {
+          "name": "Confidentiality",
+          "description": "Retail AI systems often have access to a combination of customer, transactional, and business information that supports sales, customer service, fraud prevention, and operational decision-making. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, retail environments introduce additional high-value targets including purchase histories, payment information, loyalty records, customer profiles, fraud investigations, vendor agreements, pricing strategies, and promotional data. \n\nAttackers may also seek to uncover discount approval thresholds, refund criteria, fraud detection logic, loyalty qualification rules, or other operational knowledge that reveals how retailers make commercial and customer service decisions. Because retailers rely heavily on customer trust, competitive pricing strategies, and large volumes of consumer data, confidentiality failures can expose sensitive information, reveal proprietary business processes, and create privacy, financial, and reputational risks."
+        },
+        {
+          "name": "Integrity",
+          "description": "Retail organizations depend on accurate information and consistent decision-making across pricing, promotions, customer service, fraud prevention, inventory management, and order fulfillment processes. Attackers may attempt to influence refund determinations, promotional eligibility decisions, fraud reviews, inventory assessments, customer escalations, loyalty program outcomes, or other workflows that affect commercial transactions and customer experiences. \n\nRetail AI systems are often trusted to assist customers, support representatives, store personnel, and operational teams, making them attractive targets for prompt injections that manipulate recommendations, alter classifications, redirect workflows, invoke unauthorized actions, or distort information presented to human decision-makers. Even subtle changes to outputs can influence purchasing decisions, financial outcomes, fraud investigations, customer treatment, and operational efficiency."
+        },
+        {
+          "name": "Availability",
+          "description": "Retail organizations are often measured by their ability to process transactions and resolve customer issues quickly and at scale. Attackers may attempt to overwhelm customer service workflows, generate excessive refund requests, trigger repeated fraud investigations, exhaust support resources, create unnecessary escalations, or otherwise consume operational capacity. \n\nBecause retailers often operate at high transaction volumes and place significant emphasis on customer experience, attacks that increase workload, create delays, or disrupt access to critical systems can have consequences that extend beyond technical performance. The result may include slower customer service, delayed order processing, reduced fraud response effectiveness, increased operational costs, and diminished ability to support customers during peak demand periods."
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "objectives": [
+        {
+          "name": "Confidentiality",
+          "description": "Technology organizations often rely on AI systems that have visibility into proprietary code, internal documentation, infrastructure details, security operations, and other sensitive technical assets. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, technology environments introduce additional high-value targets including source code repositories, API keys, architecture diagrams, security reports, vulnerability information, customer configuration data, unreleased product plans, and proprietary algorithms. \n\nAttackers may also seek to uncover abuse detection logic, rate-limiting controls, security monitoring heuristics, vulnerability triage criteria, or other operational knowledge that reveals how technical systems are secured and maintained. Because these organizations often depend on intellectual property, platform security, and customer trust, confidentiality failures can expose critical assets, reveal defensive controls, and create significant security, financial, and competitive risks."
+        },
+        {
+          "name": "Integrity",
+          "description": "Technology organizations depend on accurate technical information and reliable operational processes to support software development, security operations, infrastructure management, and customer-facing services. Attackers may attempt to influence vulnerability assessments, incident investigations, code reviews, deployment decisions, support workflows, security escalations, or other processes that affect technical and business outcomes. \n\nAI systems are increasingly embedded within engineering, security, and operational workflows, making them attractive targets for prompt injections that manipulate recommendations, alter classifications, redirect investigations, invoke unauthorized actions, or distort information presented to developers and decision-makers. Even subtle changes to outputs can affect security posture, software quality, operational stability, compliance activities, and customer trust."
+        },
+        {
+          "name": "Availability",
+          "description": "Many technology organizations rely on AI systems to support software development, customer support, security operations, infrastructure management, and other high-volume operational workflows. Attackers may attempt to overwhelm support systems, trigger excessive security reviews, generate repeated troubleshooting loops, exhaust human review resources, create unnecessary escalations, or otherwise consume operational capacity. \n\nBecause technology companies often prioritize rapid response, continuous availability, and efficient service delivery, attacks that create workflow bottlenecks or increase resource consumption can have consequences that extend well beyond technical performance. The result may include delayed engineering work, slower incident response, reduced support effectiveness, increased operational costs, and diminished ability to maintain reliable services for customers and internal teams."
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "objectives": [
+        {
+          "name": "Confidentiality",
+          "description": "Educational AI systems often have access to a mix of student information, instructional materials, and institutional resources that are intended for limited audiences. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, educational environments introduce additional high-value targets including student records, grades, disciplinary reports, accommodation information, instructor materials, unpublished assessments, grading rubrics, answer keys, and course content. \n\nAttackers may also seek to uncover evaluation criteria, instructional guidance, exam question banks, or other educational resources that reveal how learning outcomes and academic performance are assessed. Because educational institutions are responsible for protecting both student privacy and academic materials, confidentiality failures can expose sensitive information, undermine assessment processes, and erode trust in educational systems."
+        },
+        {
+          "name": "Integrity",
+          "description": "Learning environments depend on accurate instruction, fair assessment practices, and educational processes that measure genuine understanding and achievement. Attackers may attempt to influence grading decisions, tutoring interactions, assignment evaluations, academic misconduct reviews, student performance assessments, or other workflows that affect educational outcomes. \n\nEducational AI systems are often trusted by students, instructors, and administrators, making them attractive targets for prompt injections that transform learning assistance into answer generation, manipulate evaluations, redirect academic workflows, or distort information presented to educators and learners. Even seemingly small changes to outputs can affect academic integrity, student performance, institutional decision-making, and confidence in educational programs."
+        },
+        {
+          "name": "Availability",
+          "description": "Educational institutions often rely on AI systems to support tutoring, assessment, student services, academic support, and large-scale learning activities. Attackers may attempt to overwhelm tutoring platforms, generate excessive grading requests, trigger repeated instructor reviews, create resource-intensive learning interactions, or otherwise consume operational and computational capacity. \n\nBecause educational systems frequently serve large student populations and operate around academic deadlines, attacks that create delays or increase workload can have consequences that extend beyond technical performance. The result may include slower feedback cycles, reduced instructional support, delayed academic services, increased administrative burden, and diminished ability to effectively support students and educators."
+        }
+      ]
+    },
+    {
+      "name": "Legal",
+      "objectives": [
+        {
+          "name": "Confidentiality",
+          "description": "Legal and compliance AI systems often operate within environments that contain some of an organization's most sensitive and strategically valuable information. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, legal environments introduce additional high-value targets including privileged communications, internal investigations, draft litigation strategies, contract negotiations, regulatory inquiries, compliance assessments, client records, and confidential legal work product. \n\nAttackers may also seek to uncover internal policy interpretation frameworks, regulatory risk models, negotiation playbooks, escalation criteria, or other operational guidance that reveals how legal and compliance decisions are evaluated. Because legal functions frequently manage confidential, privileged, and strategically sensitive information, confidentiality failures can create legal liability, compromise ongoing matters, expose organizational strategy, and undermine trust in legal operations."
+        },
+        {
+          "name": "Integrity",
+          "description": "Organizations rely on legal and compliance functions to provide accurate interpretations of laws, regulations, contracts, and internal policies that guide business decisions and risk management activities. Attackers may attempt to influence contract reviews, regulatory assessments, policy interpretations, compliance classifications, legal risk evaluations, investigation summaries, or other workflows that affect how legal obligations are understood and enforced. \n\nLegal AI systems are often trusted to assist attorneys, compliance professionals, investigators, and business stakeholders, making them attractive targets for prompt injections that manipulate recommendations, alter risk characterizations, redirect review processes, invoke unauthorized actions, or distort information presented to decision-makers. Even subtle changes to outputs can influence regulatory posture, contractual obligations, litigation strategy, and organizational decision-making."
+        },
+        {
+          "name": "Availability",
+          "description": "Legal and compliance teams often depend on timely access to documents, review processes, regulatory information, and investigative workflows to support business operations and risk management. Attackers may attempt to overwhelm contract review systems, generate excessive compliance inquiries, trigger repeated legal escalations, exhaust human review resources, or otherwise consume operational capacity. \n\nBecause legal and compliance functions frequently operate with high review standards and limited specialized personnel, attacks that increase workload or create review bottlenecks can have consequences that extend well beyond technical performance. The result may include delayed contract approvals, slower regulatory assessments, reduced investigative capacity, increased operational costs, and diminished ability to respond effectively to legal and compliance obligations."
+        }
+      ]
+    },
+    {
+      "name": "Manufacturing",
+      "objectives": [
+        {
+          "name": "Confidentiality",
+          "description": "Manufacturing AI systems often operate within environments that contain proprietary engineering knowledge, operational data, and process information that directly influence product quality and competitive advantage. While attackers may target common AI assets such as system prompts, internal instructions, credentials, training data, or enterprise documents, manufacturing environments introduce additional high-value targets including product designs, CAD files, bills of materials, process specifications, production data, supplier contracts, quality reports, and maintenance records. \n\nAttackers may also seek to uncover production tolerances, defect classification criteria, supplier scoring methodologies, maintenance heuristics, process optimization rules, or other operational knowledge that reveals how products are designed, manufactured, and evaluated. Because manufacturing organizations often rely on intellectual property and specialized operational expertise, confidentiality failures can expose trade secrets, weaken competitive positioning, and create regulatory or contractual risks."
+        },
+        {
+          "name": "Integrity",
+          "description": "Every manufacturing operation depends on consistent processes, accurate quality assessments, and reliable operational decision-making to ensure products meet safety, performance, and regulatory requirements. Attackers may attempt to influence defect classifications, maintenance recommendations, production schedules, quality inspections, supplier evaluations, inventory decisions, or other workflows that affect manufacturing outcomes. \n\nManufacturing AI systems are increasingly trusted to support engineers, operators, planners, quality teams, and supply chain personnel, making them attractive targets for prompt injections that manipulate recommendations, alter classifications, redirect workflows, invoke unauthorized actions, or distort information presented to decision-makers. Even seemingly minor changes to outputs can affect product quality, workplace safety, production efficiency, regulatory compliance, and customer trust."
+        },
+        {
+          "name": "Availability",
+          "description": "Production environments are designed around the continuous movement of materials, information, and decisions across interconnected operational workflows. Attackers may attempt to overwhelm production planning systems, generate excessive maintenance alerts, trigger repeated quality reviews, exhaust engineering resources, create unnecessary escalations, or otherwise consume operational capacity. \n\nBecause manufacturing organizations often operate with tightly coordinated schedules and dependencies between suppliers, production lines, and distribution networks, attacks that introduce delays or bottlenecks can have consequences that extend far beyond a single system. The result may include production slowdowns, delayed shipments, reduced operational efficiency, increased costs, supply chain disruption, and diminished ability to meet customer and regulatory requirements."
+        }
+      ]
+    }
+  ]
+}
