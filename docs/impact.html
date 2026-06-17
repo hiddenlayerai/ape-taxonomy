@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APE Impact</title>
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <script src="js/impactPage.js" defer></script>
+</head>
+<body class="detail-page impact-page">
+  <header>
+    <a href="/index.html" class="nav-logo-link">
+      <img src="images/logo.png" alt="HiddenLayer APE Home" class="nav-logo" />
+    </a>
+    <div class="header-actions">
+      <a href="https://github.com/hiddenlayerai/ape-taxonomy" target="_blank" rel="noopener noreferrer"
+         class="header-btn">
+        <svg height="14" viewBox="0 0 16 16" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        GitHub Repository
+      </a>
+    </div>
+    <nav id="main-nav">
+      <a href="index.html" class="nav-link">Graph View</a>
+      <a href="ttps.html" class="nav-link">Tactics & Techniques</a>
+      <a href="objectives.html" class="nav-link active">Objectives</a>
+      <a href="contribute.html" class="nav-link">Contribute</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+  </header>
+
+  <div class="detail-app">
+    <aside class="detail-sidebar" id="detail-sidebar">
+      <input id="detail-nav-search" class="detail-sidebar-search" type="text" placeholder="Filter APE Objectives" />
+
+      <div class="detail-nav-section-title">Objectives</div>
+      <nav id="detail-sidebar-nav"></nav>
+    </aside>
+
+    <main class="detail-main">
+      <div class="detail-page-wrap">
+        <div class="detail-mobile-topbar">
+          <button class="detail-toggle-nav" id="detail-toggle-nav" type="button">Browse APE Objectives</button>
+          <a href="objectives.html">Back to Objectives</a>
+        </div>
+
+        <div class="detail-breadcrumbs" id="detail-breadcrumbs"></div>
+
+        <section class="detail-headline">
+          <div class="detail-hero">
+            <div class="detail-eyebrow" id="detail-hero-tag">Impact</div>
+            <h1 id="detail-impact-name">Loading…</h1>
+            <div class="detail-hero-desc" id="detail-impact-description"></div>
+          </div>
+
+          <aside class="detail-meta">
+            <h2>Metadata</h2>
+
+            <div class="detail-meta-row">
+              <div class="detail-meta-label">Impact ID</div>
+              <div class="detail-meta-value" id="detail-meta-impact-id">—</div>
+            </div>
+
+            <div class="detail-meta-row">
+              <div class="detail-meta-label">Impact Short Name</div>
+              <div class="detail-meta-value" id="detail-meta-impact-short-name">—</div>
+            </div>
+
+            <div class="detail-meta-row">
+              <div class="detail-meta-label">Objective Count</div>
+              <div class="detail-meta-value" id="detail-meta-objective-count">—</div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="detail-panel detail-selector-panel" aria-labelledby="detail-selector-heading">
+          <div class="detail-selector-header">
+            <div>
+              <h2 id="detail-selector-heading">Domain Specific Impact</h2>
+            </div>
+            <div class="detail-chips" id="detail-subtypes">
+              <span class="detail-chip">Healthcare</span> 
+              <span class="detail-chip">Finance</span>  
+              <span class="detail-chip">Automotive</span>  
+              <span class="detail-chip">Technology</span>  
+            </div>
+          </div>
+        </section>
+
+        <div class="detail-content-grid">
+          <section class="detail-panel">
+            <h2>Objectives</h2>
+
+            <div class="detail-table-wrap">
+              <table class="detail-table">
+                <thead>
+                  <tr>
+                    <th>Objective</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody id="detail-objectives-table-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="detail-modal" id="detail-modal" hidden>
+  <div class="detail-modal-backdrop"></div>
+
+  <div
+    class="detail-modal-content"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="detail-modal-title">
+    <button
+      type="button"
+      class="detail-modal-close"
+      id="detail-modal-close"
+      aria-label="Close">
+      ×
+    </button>
+
+    <h2 id="detail-modal-title"></h2>
+    <div id="detail-modal-body"></div>
+  </div>
+</div>
+
+  <footer class="site-footer">
+    <a href="https://github.com/hiddenlayerai/ape-taxonomy" style="color: #37C980; text-decoration: none;">APE Taxonomy</a>
+    <span>&nbsp;© 2026 by&nbsp;</span>
+    <a href="https://hiddenlayer.com" style="color: #37C980; text-decoration: none;">HiddenLayer</a>
+    <span>&nbsp;is licensed under&nbsp;</span>
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/" style="color: #ccc; text-decoration: none;">CC BY-ND 4.0</a>
+  </footer>
+
+  
+</body>
+</html>

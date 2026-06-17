@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HiddenLayer APE</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ── Header + Navigation ── -->
+  <header>
+    <a href="/index.html" class="nav-logo-link">
+      <img src="images/logo.png" alt="HiddenLayer APE Home" class="nav-logo" />
+    </a>
+    <div class="header-actions">
+      <a href="https://github.com/hiddenlayerai/ape-taxonomy" target="_blank" rel="noopener noreferrer"
+         class="header-btn">
+        <svg height="14" viewBox="0 0 16 16" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        GitHub Repository
+      </a>
+    </div>
+    <nav id="main-nav">
+      <a href="index.html" class="nav-link">Graph View</a>
+      <a href="ttps.html" class="nav-link">Tactics & Techniques</a>
+      <a href="objectives.html" class="nav-link">Objectives</a>
+      <a href="contribute.html" class="nav-link">Contribute</a>
+      <a href="about.html" class="nav-link active">About</a>
+    </nav>
+  </header>
+
+  <!-- ── Main Content ── -->
+  <main id="main-content" class="contribute-page">
+    <section class="content-section contribute-intro">
+      <div class="section-label">About the APE Taxonomy</div>
+      <p>
+        "Prompt injection” has become a catch-all term for a wide range of attacks against generative AI systems, especially large language models. But taxonomically, it does too much work. It can refer to a delivery mechanism, an adversarial technique, a model behavior, an attacker objective, or an impact.
+      </p>
+      <p>
+        The HiddenLayer Adversarial Prompt Engineering (APE) Taxonomy was created to bring more structure to this space. It gives security practitioners, researchers, and organizations a shared language for describing adversarial prompts with more precision.
+      </p>
+      <p>
+        Community efforts like <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank">OWASP Top 10 for LLMs</a> and <a href="https://atlas.mitre.org/" target="_blank">MITRE ATLAS</a> have helped establish prompt injection and jailbreaks as important AI security risks. APE complements those frameworks by going deeper at the prompt level: identifying the specific tactics, techniques, and prompt patterns used to manipulate generative AI systems.
+      </p>
+      <div class="section-label">How the Taxonomy Works</div>
+      <p>
+        The taxonomy is built around a familiar abstraction model from cybersecurity: Tactics, Techniques, and Procedures. In APE, concrete procedures are represented as prompts or prompt sequences.
+      </p>
+      <p>
+        Prompts are the concrete artifacts: the strings of text, instructions, or input sequences presented to the system. Techniques are repeatable patterns abstracted from those prompts. Tactics are higher-level groupings of techniques based on the mechanism they exploit.
+      </p>
+      <p>
+        APE intentionally separates this observable layer from the objective layer. Tactics, techniques, and prompts describe what can be seen in the interaction. Impacts and objectives describe what the adversary appears to be trying to accomplish, which usually has to be inferred from the surrounding context and resulting system behavior.
+      </p>
+      <p>
+        This separation avoids brittle one-to-one mappings between method and motive. The same technique may be used to expose a system prompt, manipulate a workflow, trigger an unauthorized tool call, or produce prohibited content. Analysts can first tag the observable behavior, then infer objectives when the context supports it.
+      </p>
+      <p>
+        To learn more about the Adversarial Prompt Engineering (APE) Taxonomy, you can read the <a href="https://www.hiddenlayer.com/research/introducing-a-taxonomy-of-adversarial-prompt-engineering" target="_blank">introductory blog</a>. To explore how the taxonomy is structured and maintained, visit <a href="https://github.com/hiddenlayerai/ape-taxonomy" target="_blank">https://github.com/hiddenlayerai/ape-taxonomy</a>. 
+      </p>
+    </section>
+
+    <section class="content-section">
+      <div class="section-label">Key Concepts</div>
+      <!--
+      <img src="/images/taxonomy_graphic.png" alt="APE TTPs" style="width: 75%; display: block; margin: 0 auto 20px;">
+      -->
+      <div class="about-panel-grid">
+        <article class="detail-panel about-panel">
+          <h2>Impacts & Objectives</h2>
+          <h4>Impacts</h4>
+          <p>Broad categories of AI security consequences. APE maps impact to the traditional CIA triad: (<a href="/impact.html?id=HLG01">Confidentiality</a>, <a href="/impact.html?id=HLG02">Integrity</a>, and <a href="/impact.html?id=HLG03">Availability</a>).</p>
+          <h4>Objectives</h4>
+          <p>Specific outcomes the adversary is trying to achieve such as <a href="/objective.html?id=HLG01.01">System Prompt Exposure</a>, <a href="/objective.html?id=HLG02.01">Task Redirection</a>, or <a href="/objective.html?id=HLG03.03">Denial of Wallet</a>.</p>
+          <h4>Subtypes</h4>
+          <p>More granular variations of specific objectives. APE currently uses subtypes under Content Policy Violation to distinguish common policy-bound behaviors, such as Offensive Cyber Assistance, Phishing Assistance, and Self-Harm Facilitation.</p>
+        </article>
+
+        <article class="detail-panel about-panel">
+          <h2>Tactics Techniques & Prompts</h2>
+          <p>Tactics, techniques, and prompts describe the observable structure of an adversarial prompt attack.</p>
+          <h4>Tactics</h4>
+          <p>High-level categories that group techniques by the mechanism they exploit, such as <a href="tactic.html?id=HLT01">Obfuscation</a>, <a href="tactic.html?id=HLT05">Context Manipulation</a>, or <a href="tactic.html?id=HLT04">Token Manipulation.</a></p>
+          <h4>Techniques</h4>
+          <p>Specific, repeatable methods used within adversarial prompts. Techniques capture patterns that can be observed across concrete examples. </p>
+          <h4>Prompts</h4>
+          <p>Concrete strings of text or sequences of inputs presented to a generative AI system. They represent tangible evidence of an adversarial interaction.</p>
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="content-section contribute-intro">
+      <div class="section-label">AI Runtime Security</div>
+      <p>
+        The same structure that makes the taxonomy useful for testing also makes it useful for defense. By mapping observed prompts and model behaviors to specific tactics, techniques, impacts, and objectives, <a href="https://www.hiddenlayer.com/platform/ai-runtime-security" target="_blank">security solutions</a> can produce more meaningful detections and reduce ambiguity in alerts. 
+      </p>
+      <p>
+        Instead of simply flagging “prompt injection,” organizations can understand what kind of adversarial behavior is being attempted and what outcome it may be trying to produce. That context enables more targeted mitigations, stronger policy enforcement, and better alignment between security operations and AI development teams.
+      </p>
+    </section>
+
+    <section class="content-section contribute-intro">
+      <div class="section-label">Applied in AI Red Team Engagements</div>
+      <p>
+        The <a href="https://www.hiddenlayer.com/services" target="_blank">HiddenLayer AI Red Team</a> uses the APE Taxonomy as a foundation for rigorous and repeatable testing. Rather than relying only on ad hoc prompt crafting or automated tooling, the taxonomy helps define success criteria through impacts and objectives, while guiding exploration across a broad range of adversarial behaviors through tactics and techniques.
+      </p>
+      <p>
+        This helps ensure that testing covers not only obvious attack paths, but also more subtle combinations of tactics and techniques that may expose deeper vulnerabilities. The taxonomy also standardizes how findings are documented and communicated, allowing organizations to understand the nature of the risks identified and how they map to attacker objectives.
+      </p>
+    </section>
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://github.com/hiddenlayerai/ape-taxonomy" style="color: #37C980; text-decoration: none;">APE Taxonomy</a>
+    <span>&nbsp;© 2026 by&nbsp;</span>
+    <a href="https://hiddenlayer.com" style="color: #37C980; text-decoration: none;">HiddenLayer</a>
+    <span>&nbsp;is licensed under&nbsp;</span>
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/" style="color: #ccc; text-decoration: none;">CC BY-ND 4.0</a>
+  </footer>
+</body>
+</html>

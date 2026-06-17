@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HiddenLayer APE</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ── Header + Navigation ── -->
+  <header>
+    <a href="/index.html" class="nav-logo-link">
+      <img src="images/logo.png" alt="HiddenLayer APE Home" class="nav-logo" />
+    </a>
+    <div class="header-actions">
+      <a href="https://github.com/hiddenlayerai/ape-taxonomy" target="_blank" rel="noopener noreferrer"
+         class="header-btn">
+        <svg height="14" viewBox="0 0 16 16" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        GitHub Repository
+      </a>
+    </div>
+    <nav id="main-nav">
+      <a href="index.html" class="nav-link">Graph View</a>
+      <a href="ttps.html" class="nav-link">Tactics & Techniques</a>
+      <a href="objectives.html" class="nav-link">Objectives</a>
+      <a href="contribute.html" class="nav-link active">Contribute</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+  </header>
+
+  <!-- ── Main Content ── -->
+  <main id="main-content" class="contribute-page">
+    <section class="content-section contribute-intro">
+      <div class="section-label">Contribute to the APE Taxonomy</div>
+      <p>
+        HiddenLayer's Taxonomy of Adversarial Prompt Engineering (APE) is designed to help defenders, researchers, and AI builders describe adversarial prompt behaviors in a consistent, practical way. The taxonomy is most useful when it reflects techniques observed in real systems, credible research, and repeatable testing rather than purely hypothetical attacks.
+      </p>
+      <p>
+        We welcome contributions that improve the accuracy, coverage, and usability of the taxonomy. Strong submissions clearly explain what is new, where it fits, how it differs from existing entries, and why it matters to practitioners working to secure AI systems.
+      </p>
+      <p>
+        Before submitting, please review the current taxonomy to see whether your idea is already represented. Contributions may strengthen an existing tactic, technique, objective, or sample prompt rather than requiring a completely new entry.
+      </p>
+      <div class="contribute-actions">
+        <button class="contribute-button" id="toggle-form-btn" type="button">Contribute to APE</button>
+      </div>
+    </section>
+
+
+
+    <section class="content-section">
+      <div class="section-label">What we're looking for</div>
+      <div class="contribute-panel-grid">
+        <article class="detail-panel contribute-panel">
+          <h2>Tactics and Techniques</h2>
+          <p>
+            Submit novel or newly observed adversarial prompt engineering behaviors that are not currently captured by the taxonomy. These contributions should describe a distinct attacker approach, not just a minor wording variation of an existing prompt.
+          </p>
+          <p>
+            Helpful submissions explain the technique, the attacker intent, how it differs from current taxonomy entries, and any supporting context such as research, examples, or observed usage.
+          </p>
+        </article>
+
+        <article class="detail-panel contribute-panel">
+          <h2>Sample Prompts</h2>
+          <p>
+            Share adversarial prompts that are representative of existing techniques. These examples help make the taxonomy easier to understand, test, and apply in real-world evaluation workflows.
+          </p>
+          <p>
+            Strong prompt submissions include the relevant technique, the expected model behavior, and enough context to show why the prompt is a useful example without relying on unnecessary sensitive details.
+          </p>
+        </article>
+
+        <article class="detail-panel contribute-panel">
+          <h2>Objectives</h2>
+          <p>
+            Suggest new objectives, subtypes, or updates to existing objective and subtype definitions. These contributions help ensure the taxonomy reflects why adversaries use prompt engineering, not only how they do it.
+          </p>
+          <p>
+            Useful submissions describe the adversarial outcome, where it belongs in the current structure, and whether it should be represented as a new objective, a refinement of an existing one, or additional context for current entries.
+          </p>
+        </article>
+      </div>
+    <section
+      id="private-submission-form"
+      class="content-section form-section"
+      style="display: none;"
+    >
+      <div class="section-label">APE Contribution Form</div>
+
+      <p class="form-intro">
+        Submit a new technique, objective, sample prompt, or suggested improvement.
+        Contributions are reviewed before being added to the taxonomy.
+      </p>
+
+      <div class="form-frame-shell">
+        <iframe
+          class="ape-form-frame"
+          src="https://docs.google.com/forms/d/e/1FAIpQLScv2QqrxHCH514rM9yKeVhC7ojHnRPyM0qOVdQ8nf7Z1EoTtw/viewform?embedded=true"
+          loading="lazy"
+        >
+          Loading…
+        </iframe>
+      </div>
+    </section>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-form-btn');
+  const formSection = document.getElementById('private-submission-form');
+
+  toggleBtn.addEventListener('click', () => {
+    const isHidden = formSection.style.display === 'none';
+
+    formSection.style.display = isHidden ? 'block' : 'none';
+
+    toggleBtn.textContent = isHidden
+      ? 'Hide APE Contribution Form'
+      : 'Contribute to APE';
+
+    if (isHidden) {
+      formSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+</script>
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://github.com/hiddenlayerai/ape-taxonomy" style="color: #37C980; text-decoration: none;">APE Taxonomy</a>
+    <span>&nbsp;© 2026 by&nbsp;</span>
+    <a href="https://hiddenlayer.com" style="color: #37C980; text-decoration: none;">HiddenLayer</a>
+    <span>&nbsp;is licensed under&nbsp;</span>
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/" style="color: #ccc; text-decoration: none;">CC BY-ND 4.0</a>
+  </footer>
+</body>
+
+</html>
