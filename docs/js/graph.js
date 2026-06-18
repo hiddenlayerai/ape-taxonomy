@@ -108,6 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (expandAllBtn) {
     expandAllBtn.addEventListener('click', expandAllTactics);
   }
+
+  const legacyBtn = document.getElementById('graph-legacy-btn');
+  if (legacyBtn) {
+    legacyBtn.addEventListener('click', () => {
+      window.location.href = '/legacy';
+    });
+}
+
   document.getElementById('graph-search-input').addEventListener('blur', e => {
     if (e.relatedTarget === document.getElementById('graph-clear-btn')) return;
     if (!currentQuery) return;

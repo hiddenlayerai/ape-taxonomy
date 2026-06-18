@@ -1671,6 +1671,7 @@ main {
   gap: 10px;
 }
 
+#graph-legacy-btn,
 #graph-reset-btn {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1684,6 +1685,7 @@ main {
   transition: color var(--transition), border-color var(--transition);
 }
 
+#graph-legacy-btn:hover,
 #graph-reset-btn:hover {
   color: var(--accent);
   border-color: var(--accent);
